@@ -5,7 +5,7 @@ MAINTAINER Sebastien Langoureaux <linuxworkgroup@hotmail.com>
 # Install gitflow and git
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install git git-flow opendiff xfce4-terminal -y && \
+    apt-get install git git-flow meld xfce4-terminal -y && \
     update-locale LANG=C.UTF-8 LC_MESSAGES=POSIX && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
