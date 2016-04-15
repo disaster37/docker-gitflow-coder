@@ -15,13 +15,13 @@ RUN apt-get update && \
 
 # Add user
 RUN mkdir -p /workspace
-RUN useradd -d /workspace -m -s /bin/bash dev
+RUN useradd -m -s /bin/bash dev
 RUN chown -R dev /workspace
 
 WORKDIR /workspace
 
 USER dev
 
-VOLUME [ "/workspace" ]
+VOLUME [ "/workspace", "/home/dev" ]
 
 CMD xfce4-terminal --command '/bin/bash' --title 'Git shell'
